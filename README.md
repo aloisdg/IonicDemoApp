@@ -16,7 +16,7 @@
 
 ## Developement
 
-1) Create a new project "TypeScript > Cordova apps" in Visual Studio.
+1) Create a new project "TypeScript > Blank App (Apache Cordova)" in Visual Studio.
 
 2) Get [Ionic][nuget-ionic] and [JQuery][nuget-jquery] from nuget.
 
