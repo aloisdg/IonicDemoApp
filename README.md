@@ -3,9 +3,13 @@
 ## Installation
 
 1) Install [Git for Windows][win-git].
+
 2) Install [Console][win-console] if you want too. You may need it for Ionic.
+
 3) Install [Visual Studio Tools][win-cordova] for Apache Cordova.
+
 4) Reboot Windows.
+
 5) Run Visual Studio.
 
 ## Developement
