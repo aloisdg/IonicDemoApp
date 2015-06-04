@@ -36,7 +36,7 @@
 </div>
 ```
 
-6) Run your projet
+6) Run your projet.
 
 [win-git]: http://git-scm.com/download/win
 [win-console]: http://sourceforge.net/projects/console/
