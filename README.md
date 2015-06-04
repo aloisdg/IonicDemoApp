@@ -8,7 +8,7 @@
 
 3) Install [Visual Studio Tools for Apache Cordova][win-cordova].
 
-3 bis) If you are using Visual Studio 2013, you have to install [Visual Studio Tools for Apache Cordova CTP3.1 ][win-ctp31] instead.
+3 bis) If you are using Visual Studio 2013 Update 4, you have to install [Visual Studio Tools for Apache Cordova CTP3.1 ][win-ctp31] instead.
 
 4) Reboot Windows.
 
