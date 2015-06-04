@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE>
 <html lang="en" data-ng-app="App">
 <head>
     <meta charset="utf-8" />
@@ -8,32 +8,53 @@
     <!-- IonicDemoApp references -->
 
     <link href="Content/ionic.css" rel="stylesheet" />
-	<link href="css/index.css" rel="stylesheet"/>
-	<script>
-		(function () {
-			if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile/)) {
-				var msViewportStyle = document.createElement("style");
-				msViewportStyle.appendChild(
-					document.createTextNode("@-ms-viewport{width:auto!important}")
-				);
-				document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
-			}
-		})();
-	</script>
+    <link href="css/index.css" rel="stylesheet" />
+    <script>
+        (function () {
+            if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile/)) {
+                var msViewportStyle = document.createElement("style");
+                msViewportStyle.appendChild(
+			document.createTextNode("@-ms-viewport{width:auto!important}")
+		);
+                document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+            }
+        })();
+    </script>
 
 </head>
 <body data-ng-controller="AppCtrl">
 
-    <div class="bar bar-header bar-balanced">
-        <h1 class="title">bar-balanced</h1>
+    <ion-header-bar class="bar-assertive">
+	    <h1 class="title">IonicDemoApp</h1>
         <button class="button" data-ng-click="refresh()">
-            <i class="icon ion-refresh"></i>
+            <i class="icon ion-ios-email"></i>
         </button>
-    </div>
+    </ion-header-bar>
     <ion-content>
-        <h1>some content</h1>
-    </ion-content>
 
+        Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+
+        <!--<ion-refresher on-refresh="loadBlogs()">
+        </ion-refresher>
+        <div data-ng-if="!posts.length"></div>
+        <div class="list" data-ng-if="posts.length">
+                <a data-ng-repeat="p in posts" data-ng-click="viewBlog(p.URL)">
+                        <div class="blog-title" data-ng-bind-html="toTrusted(p.title)">
+                        </div>
+                        <div class="blog-details">
+                                <img data-ng-src="{{p.author.avatar_URL}}" alt="">
+                                <span>
+                        <span class="blogger"> {{ p.author.nice_name }} </span>
+                        <span class="pubdate">{{ p.date }} </span>
+                    </span>
+                        </div>
+
+                </a>
+        </div>
+        <ion-infinite-scroll on-infinite="moreBlogs()"
+                             data-ng-if="infiniteLoad" icon="">
+        </ion-infinite-scroll>-->
+    </ion-content>
 
 
     <!-- Cordova reference, this is added to your app when it's built. -->
@@ -41,20 +62,70 @@
     <script src="scripts/platformOverrides.js"></script>
     <script src="scripts/jquery-2.1.4.js"></script>
     <script src="scripts/ionic.bundle.js"></script>
-<script src="scripts/index.ts"></script>
-<script>
-    var App = angular.module("App", ["ionic"]);
+    <script src="scripts/index.ts"></script>
+    <script>
 
-    App.controller("AppCtrl", ["$scope", "$log", AppCtrl]);
-
-    function  AppCtrl($scope, $log) {
-        $scope.refresh = function () {
-	    alert("Button pressed");
+        var App = angular.module("App", ["ionic"]);
+        App.controller("AppCtrl", ["$scope", "$log", AppCtrl]);
+        function AppCtrl($scope, $log) {
+            $scope.refresh = function () {
+                alert("Hello, World!");
+            }
         }
-    }
 
-    // https://www.youtube.com/watch?v=sCnGSOaaZFo
-</script>
+
+        //var FreshlyPressed = angular.module("App", ["ionic"]);
+
+        //FreshlyPressed.controller("AppCtrl",
+        //		  ["$scope", "$sce", "$ionicLoading", "FreshlyPressedService", "$log", FreshlyPressedCtrl]);
+
+        //FreshlyPressed.service("FreshlyPressedService",
+        //	       ["$http", "$log", FreshlyPressedService]);
+
+        //function FreshlyPressedCtrl($scope, $sce, $ionicLoading, FreshlyPressedService, $log) {
+        //    $scope.posts = [];
+        //    $scope.beforeDate = null;
+        //    $scope.infiniteLoad = false;
+        //    $scope.viewBlog = function (url) {
+        //        window.open(url, "_blank", "location=no");
+        //    }
+        //    $scope.loadBlogs = function () {
+        //        $scope.infiniteLoad = false;
+        //        $scope.beforeDate = null;
+        //        if ($scope.posts.length) {
+        //            $scope.posts = [];
+        //            $scope.moreBlogs();
+        //        }
+        //        $scope.$broadcast("scroll.refreshComplete");
+        //        $scope.infiniteLoad = true;
+        //    }
+        //    $scope.moreBlogs = function () {
+        //        $ionicLoading.show({ template: "Loading blogs..." });
+        //        FreshlyPressedService.loadBlogs($scope.beforeDate)
+        //    .success(function (result) {
+        //        $scope.posts = $scope.posts.concat(result.posts);
+        //        $scope.beforeDate = result.date_range.oldest;
+        //        $scope.$broadcast("scroll.infiniteScrollComplete");
+        //        $ionicLoading.hide();
+        //    });
+        //    }
+        //    $scope.toTrusted = function (text) {
+        //        return ($sce.trustAsHtml(text));
+        //    }
+        //}
+
+        //function FreshlyPressedService($http, $log) {
+        //    this.loadBlogs = function (date) {
+        //        var params = { number: 15 };
+        //        if (date)
+        //            params.before = date;
+        //        return ($http.get("https://public-api.wordpress.com/rest/v1/freshly-pressed/", {
+        //            params: params
+        //        }));
+        //    }
+        //}
+
+    </script>
 
 </body>
 </html>
