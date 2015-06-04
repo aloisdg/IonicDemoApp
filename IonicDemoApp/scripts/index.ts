@@ -28,7 +28,7 @@ module IonicDemoApp {
 
     }
 
-    window.onload = function () {
-        Application.initialize();
+    window.onload = () => {
+	    Application.initialize();
     }
 }

@@ -1,2 +1,16 @@
 ﻿body {
 }
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@-moz-viewport{
+}
+
+@-webkit-viewport{
+}
+
+@viewport{
+	width: device-width;
+}
