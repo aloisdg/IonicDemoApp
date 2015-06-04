@@ -6,7 +6,9 @@
 
 2) Install [Console][win-console] if you want too. You may need it for Ionic.
 
-3) Install [Visual Studio Tools][win-cordova] for Apache Cordova.
+3) Install [Visual Studio Tools for Apache Cordova][win-cordova].
+
+3 bis) If you are using Visual Studio 2013, you have to install [Visual Studio Tools for Apache Cordova CTP3.1 ][win-ctp31] instead.
 
 4) Reboot Windows.
 
@@ -39,8 +41,9 @@
 6) Run your projet.
 
 [win-git]: http://git-scm.com/download/win
-[win-console]: http://sourceforge.net/projects/console/
+[win-console]: http://sourceforge.net/projects/console
 [win-cordova]: https://www.visualstudio.com/en-us/cordova-vs.aspx
+[win-ctp31]: https://www.microsoft.com/en-us/download/details.aspx?id=42675
 [nuget-ionic]: https://www.nuget.org/packages/ionic
 [nuget-jquery]: https://www.nuget.org/packages/jQuery
 [bar-header]: http://ionicframework.com/docs/components/#header
